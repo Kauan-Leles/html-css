@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+
+/*
+#FF0D00 red
+#8F008F roxo
+#ECB829 amareloo 
+
+*/
+
+:root {
+    --cor0: #fdb6b6;
+    --cor1: rgb(238, 145, 145);
+    --corred: #FF0D00;
+    --corred2: #E80CB6;
+    --corroxo: #8F008F;
+    --corroxo1: #520CE8;
+    --coramarela: #ECB829;
+    --coramarela2: #DB9E00;
+    --coramarela3: #E8760C;
+
+    --fonte01:'Sigmar', cursive;
+
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: rgb(255, 176, 176);
+    background-color: var(--cor0);
+    font-family: var();
+}  
+
+header {
+    /*
+    background-image: linear-gradient - var serve para fazer um degrader 
+    */
+    background-image: linear-gradient(to bottom, var(--coramarela), var(--coramarela3));
+    
+    min-height: 150px;
+    /*alinhar o testo no centro*/
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color: var(--corred);
+    font-family: var(--fonte01);
+    font-size: 3em;
+    box-shadow: 0px 0px black;
+}
+
+header > p {
+    color: white;
+    font-size: 1.5em ;
+    font-family: var(--fonte01);
+}
+
+nav {
+    background-color: var(--coramarela3);
+    padding: 10px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.288);
+}
+
+nav > a {
+    color: white;
+    padding: 10px;
+    /*tirar o ____ sublinhado do link */
+    text-decoration: none;
+    /*negrito*/
+    font-weight: bold;
+    transition-duration: .5s;
+}
+
+nav > a:hover {
+    background-color: var(--corred);
+    color: var(--coramarela);
+}
+
+main {
+    padding: 20px;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.267);
+    /*arredondar apenas os cantos inferioris */
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+main h1 {
+    font-family: var(--fonte01);
+    font-size: 2em;
+    color: var(--coramarela3);
+}
+
+main h2 {
+    /*degrade*/
+    background-image: linear-gradient(to right, var(--cor0 ), transparent);
+    border-radius: 10px;
+    font-family: var(--fonte01);
+    font-size: 1;
+    color: var(--coramarela3);
+    text-indent: 8px;
+}
+
+main p {
+    /*so se coloca o > quando o tag depois do > so esta dentro daquela tag anterior 
+    ex: <main>
+        <p>lorem</p>
+    </main>
+    */
+
+        /*recuo de todo começo de paragrafo*/    
+        text-indent: 30px;
+        /*justificar o texto*/
+        text-align: justify;
+        margin: 15px 0px;
+        /*tamanho entre uma linha e outra*/
+        line-height: 1em;
+    }
+
+main strong {
+
+    color: var(--corred);
+
+    }
+
+main a {
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--coramarela2);
+    padding: 2px 6px;
+}
+
+main a:hover{
+
+    text-decoration: underline;
+    color: var(--corroxo1);
+}
+
+main img {
+    /*tamanho da imagem
+    width: 70%;
+    */
+    width: 70%;
+    /*centralizar o bloco */
+    margin: auto;
+    /*transformar a imagem em 'Bloco'*/
+    display: block;
+}
+
+main img.pequena {
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+div.video {
+    background-color: var(--corred);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {
+    background-color: rgba(243, 105, 105, 0.719);
+    color: var();
+    border-radius: 10px;
+    padding: 10px;
+}
+
+aside > ul {
+    list-style-position: inside;
+}
+
+footer {
+    color: var(--corred);
+    background-color: var(--coramarela);
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
